@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+pydantic
+motor             # async MongoDB
+redis[hiredis]
+faiss-cpu
+sentence-transformers
+aiohttp
+python-multiprocess
+pytesseract
+Pillow
+async-timeout
+python-decouple   # env vars
+pytest            # basic tests
+pathos
+websockets
