@@ -29,6 +29,7 @@ ai-compliance-orchestrator/
 │   ├── hitl_cli.py    # CLI for Human-in-the-Loop responses
 └── README.md
 ```
+<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/14127ab3-6bd1-4f70-9a0b-5e82d4de06c6" />
 
 ---
 
