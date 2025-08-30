@@ -55,3 +55,18 @@ async def run_job(session_id, job_id):
 @app.get("/result")
 async def result(job_id: str):
     return store.load_result(job_id)
+
+
+from agents import (policy_retriever, evidence_collector,
+                    vision_agent, code_scanner, risk_scorer,
+                    red_team_critic)
+
+g = DAG([
+    Node("policy", policy_retriever.run),
+    Node("evidence", evidence_collector.run),
+    Node("vision", vision_agent.run),
+    Node("code", code_scanner.run),
+    Node("risk", risk_scorer.run, deps=["policy", "evidence", "vision", "code"]),
+    Node("critic", red_team_critic.run, deps=["risk"])
+])
+
